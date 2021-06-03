@@ -15,6 +15,7 @@ def main():
 def auto(mob, txt):
   pyperclip.copy(mob)
 
+  time.sleep(0.5)
   pyautogui.hotkey('command', 'f')
 
   time.sleep(0.5)
@@ -32,8 +33,3 @@ def auto(mob, txt):
   pyautogui.press('enter')
 
 main()
-
-
-
-
-# 13173604500
