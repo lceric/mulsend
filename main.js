@@ -16,17 +16,6 @@ async function main() {
   }
 }
 
-function sleep(time) {
-  let $resolve
-  const $promise = new Promise((resolve) => {
-    $resolve = resolve
-  })
-  setTimeout(() => {
-    $resolve()
-  }, time)
-  return $promise
-}
-
 async function auto(mob, txt) {
   clipboardy.writeSync(mob)
 
@@ -46,4 +35,15 @@ async function auto(mob, txt) {
 
   await sleep(500)
   robot.keyTap('enter')
+}
+
+function sleep(time) {
+  let $resolve
+  const $promise = new Promise((resolve) => {
+    $resolve = resolve
+  })
+  setTimeout(() => {
+    $resolve()
+  }, time)
+  return $promise
 }
